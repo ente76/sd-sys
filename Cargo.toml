@@ -1,0 +1,18 @@
+[package]
+name = "sd-sys"
+version = "0.1.0"
+authors = ["Christian Klaue <ente@ck76.de>"]
+edition = "2018"
+description = "FFI for libsystemd"
+readme = "README.md"
+repository = "https://gitlab.com/systemd.rs/sd-sys"
+license = "AGPL-3.0-or-later"
+keywords = ["systemd", "libsystemd"]
+links = "systemd"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[build-dependencies]
+pkg-config = "0.3.16"
