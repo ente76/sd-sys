@@ -54,41 +54,26 @@ extern "C" {
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_print.html#>
     pub fn sd_journal_sendv(entry: *const IOVec, count: c_int) -> c_int;
-    /// `int sd_journal_print_with_location(const char *file, const char *line,
-    ///                 const char *func, int priority, const char *format, …);`
-    ///
-    /// <https://www.freedesktop.org/software/systemd/man/sd_journal_print.html#>
-    pub fn sd_journal_print_with_location(priority: c_int,
-                                          file: *const c_char,
-                                          line: *const c_char,
-                                          func: *const c_char,
-                                          message: *const c_char,
-                                          ...)
-                                          -> c_int;
-    /// `int sd_journal_sendv_with_location(const char *file, const char *line,
-    ///                     const char *func, const struct iovec *iov, int n);`
-    ///
-    /// <https://www.freedesktop.org/software/systemd/man/sd_journal_print.html#>
-    pub fn sd_journal_sendv_with_location(file: *const c_char,
-                                          line: *const c_char,
-                                          func: *const c_char,
-                                          entry: *const IOVec,
-                                          count: c_int)
-                                          -> c_int;
     // not implemented:
     // int sd_journal_printv(int priority, const char *format, va_list ap);
     // int sd_journal_send(const char *format, …);
     // int sd_journal_perror(const char *message);
+    // int sd_journal_print_with_location(const char *file, const char *line,
+    //                 const char *func, int priority, const char *format, …);
     // int sd_journal_printv_with_location(int priority, const char *file, const
     //          char *line, const char *func, const char *format, va_list ap);
     // int sd_journal_send_with_location(const char *file, const char *line, const
     //                                  char *func, const char *format, …);
+    // int sd_journal_sendv_with_location(const char *file, const char *line,
+    //                     const char *func, const struct iovec *iov, int n);
     // int sd_journal_perror_with_location(const char *file, const char *line, const
     //                                  char *func, const char *message);
+
     // <https://www.freedesktop.org/software/systemd/man/sd_journal_stream_fd.html#>
     // not implemented:
     // int sd_journal_stream_fd(const char *identifier, int priority, int
     //                                  level_prefix);
+
     /// `int sd_journal_open(sd_journal **ret, int flags);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_open.html#>

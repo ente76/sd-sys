@@ -26,7 +26,7 @@ use std::os::raw::{c_char, c_int};
 /// <https://www.freedesktop.org/software/systemd/man/sd-id128.html>
 #[allow(non_camel_case_types)]
 #[repr(C)]
-#[derive(Default, Debug)]
+#[derive(Debug, Default, Clone, PartialEq, Eq)]
 pub struct sd_id128 {
     pub value: [u8; 16]
 }

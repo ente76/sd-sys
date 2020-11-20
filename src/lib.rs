@@ -35,6 +35,8 @@ pub mod journal;
 #[allow(non_camel_case_types)]
 pub type size_t = usize;
 /// iovec implementation as used in gnu libc
+///
+/// https://man7.org/linux/man-pages/man2/readv.2.html
 #[repr(C)]
 pub struct IOVec {
     pub iov_base: *mut c_void,
