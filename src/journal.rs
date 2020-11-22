@@ -45,6 +45,10 @@ pub const LOG_NOTICE: c_int = 5;
 pub const LOG_INFO: c_int = 6;
 pub const LOG_DEBUG: c_int = 7;
 
+pub const SD_JOURNAL_NOP: c_int = 0;
+pub const SD_JOURNAL_APPEND: c_int = 1;
+pub const SD_JOURNAL_INVALIDATE: c_int = 2;
+
 extern "C" {
     /// `int sd_journal_print(int priority, const char *format, …);`
     ///
@@ -181,7 +185,7 @@ extern "C" {
     /// `int sd_journal_seek_cursor(sd_journal *j, const char *cursor);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_seek_head.html#>
-    pub fn sd_journal_seek_cursor(journal: *mut sd_journal, cursor: *const c_char);
+    pub fn sd_journal_seek_cursor(journal: *mut sd_journal, cursor: *const c_char) -> c_int;
     /// `int sd_journal_enumerate_fields(sd_journal *j, const char **field);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_enumerate_fields.html#>
@@ -312,14 +316,16 @@ extern "C" {
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_query_unique.html#>
     pub fn sd_journal_enumerate_available_unique(journal: *mut sd_journal,
                                                  data: *mut *const c_void,
-                                                 length: *mut isize);
+                                                 length: *mut size_t)
+                                                 -> c_int;
     /// `int sd_journal_enumerate_unique(sd_journal *j, const void **data,
     ///                                 size_t *length);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_query_unique.html#>
     pub fn sd_journal_enumerate_unique(journal: *mut sd_journal,
                                        data: *mut *const c_void,
-                                       length: *mut isize);
+                                       length: *mut size_t)
+                                       -> c_int;
     /// `void sd_journal_restart_unique(sd_journal *j);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_query_unique.html#>
