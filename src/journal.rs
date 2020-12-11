@@ -13,8 +13,9 @@
 //
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
-use super::{id128::sd_id128, size_t, IOVec};
-use std::os::raw::{c_char, c_int, c_void};
+use super::id128::sd_id128;
+use libc::{c_char, c_int, c_void, iovec, size_t};
+
 /// FFI data type mapping for sd-journal as defined in libsystemd
 ///
 /// This data type should rarely be used directly. Crate sd-journal defines a
@@ -22,7 +23,6 @@ use std::os::raw::{c_char, c_int, c_void};
 /// also offers low level access to libsystemd in a Rust-native way.
 #[allow(non_camel_case_types)]
 #[repr(C)]
-
 pub struct sd_journal {
     _unused: [u8; 0]
 }
@@ -57,7 +57,7 @@ extern "C" {
     /// `int sd_journal_sendv(const struct iovec *iov, int n);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_print.html#>
-    pub fn sd_journal_sendv(entry: *const IOVec, count: c_int) -> c_int;
+    pub fn sd_journal_sendv(entry: *const iovec, count: c_int) -> c_int;
     // not implemented:
     // int sd_journal_printv(int priority, const char *format, va_list ap);
     // int sd_journal_send(const char *format, …);

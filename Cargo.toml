@@ -13,6 +13,7 @@ links = "systemd"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+libc ="^0.2"
 
 [build-dependencies]
 pkg-config = "0.3.16"

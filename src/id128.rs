@@ -13,7 +13,7 @@
 //
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
-use std::os::raw::{c_char, c_int};
+use libc::{c_char, c_int};
 /// FFI data type mapping for sd-id128 as defined in libsystemd
 ///
 /// This data type should rarely be used directly. Crate sd-id128 defines a high

@@ -16,7 +16,7 @@
 //! # sd-sys
 //!
 //! FFI bindings for systemd API as offered by libsystemd.
-use std::os::raw::c_void;
+
 /// FFI mapping for sd-id128 as defined in libsystemd
 ///
 /// This module should rarely be used directly. Crate sd-id128 defines a low
@@ -24,6 +24,7 @@ use std::os::raw::c_void;
 /// function 1:1 into native rust. The same crate also offers a high level
 /// wrapper which offers additional functionality.
 pub mod id128;
+
 /// FFI mapping for sd-journal as defined in libsystemd
 ///
 /// This module should rarely be used directly. Crate sd-journal defines a low
@@ -31,14 +32,3 @@ pub mod id128;
 /// function 1:1 into native rust. The same crate also offers a high level
 /// wrapper which offers additional functionality.
 pub mod journal;
-/// An alias for usize to be used in FFI declarations
-#[allow(non_camel_case_types)]
-pub type size_t = usize;
-/// iovec implementation as used in gnu libc
-///
-/// https://man7.org/linux/man-pages/man2/readv.2.html
-#[repr(C)]
-pub struct IOVec {
-    pub iov_base: *mut c_void,
-    pub iov_len:  size_t
-}
