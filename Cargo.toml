@@ -9,11 +9,12 @@ repository = "https://gitlab.com/systemd.rs/sd-sys"
 license = "AGPL-3.0-or-later"
 keywords = ["systemd", "libsystemd"]
 links = "systemd"
+categories = ["os::linux-apis", "external-ffi-bindings"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-libc ="^0.2"
+libc ="0.2"
 
 [build-dependencies]
-pkg-config = "0.3.16"
+pkg-config = "0.3"
