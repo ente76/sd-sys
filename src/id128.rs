@@ -14,11 +14,10 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 use libc::{c_char, c_int};
-/// FFI data type mapping for sd-id128 as defined in libsystemd
+/// FFI data type mapping for sd-id128 as defined in libsystemd.
 ///
-/// This data type should rarely be used directly. Crate sd-id128 defines a high
-/// level wrapper `ID128` which should be your first choice. This wrapper also
-/// offers low level access to libsystemd in a Rust-native way.
+/// This data type should rarely be used directly. Crate sd-id128 defines a
+/// wrapper `ID128`.
 ///
 /// While libsystemd defines the data type as a union of [u8;16] and [u64;2]
 /// currently sd-sys only supports the first.
@@ -57,7 +56,8 @@ extern "C" {
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_id128_get_machine.html#>
     pub fn sd_id128_get_boot(id: *mut sd_id128) -> c_int;
-    /// int sd_id128_get_boot_app_specific(sd_id128_t app_id, sd_id128_t *ret);
+    /// `int sd_id128_get_boot_app_specific(sd_id128_t app_id,
+    /// sd_id128_t *ret);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_id128_get_machine.html#>
     pub fn sd_id128_get_boot_app_specific(app: sd_id128, boot: *mut sd_id128) -> c_int;

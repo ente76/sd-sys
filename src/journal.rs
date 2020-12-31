@@ -19,8 +19,7 @@ use libc::{c_char, c_int, c_void, iovec, size_t};
 /// FFI data type mapping for sd-journal as defined in libsystemd
 ///
 /// This data type should rarely be used directly. Crate sd-journal defines a
-/// high level wrapper `Journal` which should be your first choice. This wrapper
-/// also offers low level access to libsystemd in a Rust-native way.
+/// wrapper `Journal`.
 #[allow(non_camel_case_types)]
 #[repr(C)]
 pub struct sd_journal {
@@ -223,7 +222,7 @@ extern "C" {
                                                 from: *mut u64,
                                                 to: *mut u64)
                                                 -> c_int;
-    /// int sd_journal_get_usage(sd_journal *j, uint64_t *bytes);
+    /// `int sd_journal_get_usage(sd_journal *j, uint64_t *bytes);`
     ///
     /// <https://www.freedesktop.org/software/systemd/man/sd_journal_get_usage.html#>
     pub fn sd_journal_get_usage(journal: *mut sd_journal, size: *mut u64) -> c_int;

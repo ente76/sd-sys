@@ -15,20 +15,21 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //! # sd-sys
 //!
-//! FFI bindings for systemd API as offered by libsystemd.
+//! FFI bindings for systemd API as offered by libsystemd. These bindings are
+//! used in crates of the [sd-project](https://gitlab.com/systemd.rs).
 
-/// FFI mapping for sd-id128 as defined in libsystemd
+/// FFI binding for sd-id128 as defined in libsystemd used in
+/// [sd-id128](https://gitlab.com/systemd.rs/sd-id128)
 ///
-/// This module should rarely be used directly. Crate sd-id128 defines a low
-/// level wrapper to the FFI bindings in module lli which translates each extern
-/// function 1:1 into native rust. The same crate also offers a high level
-/// wrapper which offers additional functionality.
+/// This module should rarely be used directly. Crate sd-id128 defines a wrapper
+/// to the FFI bindings which translates each extern function 1:1 into native
+/// rust.
 pub mod id128;
 
-/// FFI mapping for sd-journal as defined in libsystemd
+/// FFI mapping for sd-journal as defined in libsystemd used in
+/// [sd-journal](https://gitlab.com/systemd.rs/sd-journal)
 ///
-/// This module should rarely be used directly. Crate sd-journal defines a low
-/// level wrapper to the FFI bindings in module lli which translates each extern
-/// function 1:1 into native rust. The same crate also offers a high level
-/// wrapper which offers additional functionality.
+/// This module should rarely be used directly. Crate sd-journal defines a
+/// wrapper to the FFI bindings which translates each extern function into
+/// native rust.
 pub mod journal;
