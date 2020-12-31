@@ -9,11 +9,6 @@ sd-sys is an alternative to libsystemd-sys from the [systemd-rust](https://githu
 
 sd-sys serves [sd-id128](https://gitlab.com/systemd.rs/sd-id128) and [sd-journal](https://gitlab.com/systemd.rs/sd-journal) as the basic FFI binding.
 
-## Status
-
-- Module id128 is fully stable. sd-id128 is fully implemented based on this module.
-- Module journal is rather a first draft. No changes are expected anymore, but the module still has to prove against an implementation. If changes are required, they will be breaking.
-
 ## License
 
 sd-sys: FFI bindings to systemd for sd-id128 & sd-journal
