@@ -1,12 +1,12 @@
 # sd-sys
 
-FFI bindings for systemd API as offered by libsystemd.
+sd-sys defines the FFI bindings for sd-id128 & sd-journal in the systemd API of [libsystemd](https://www.freedesktop.org/software/systemd/man/sd-id128.html).  sd-sys is part of the [systemd.rs](https://gitlab.com/systemd.rs) project.
 
-sd-sys is part of the [systemd.rs](https://gitlab.com/systemd.rs) project
-
-- [sd-id128](https://gitlab.com/systemd.rs/sd-id128) [![Crates.io](https://img.shields.io/crates/v/sd-id128)](https://crates.io/crates/sd-id128) [docs.rs](https://docs.rs/sd-id128/0.1.1/sd_id128/)
-- [sd-sys](https://gitlab.com/systemd.rs/sd-sys) [![Crates.io](https://img.shields.io/crates/v/sd-sys)](https://crates.io/crates/sd-sys) [docs.rs](https://docs.rs/sd-sys/0.1.0/sd_sys/)
-- [sd-journal](https://gitlab.com/systemd.rs/sd-journal)
+gitlab.com | crates.io | docs.rs
+-----------|-----------|--------
+[sd-sys](https://gitlab.com/systemd.rs/sd-sys) | [![Crates.io](https://img.shields.io/crates/v/sd-sys)](https://crates.io/crates/sd-sys) | [![docs.rs](https://docs.rs/sd-sys/badge.svg)](https://docs.rs/sd-sys/)
+[sd-id128](https://gitlab.com/systemd.rs/sd-id128) | [![Crates.io](https://img.shields.io/crates/v/sd-id128)](https://crates.io/crates/sd-id128) | [![docs.rs](https://docs.rs/sd-id128/badge.svg)](https://docs.rs/sd-id128/)
+[sd-journal](https://gitlab.com/systemd.rs/sd-journal) | [![Crates.io](https://img.shields.io/crates/v/sd-journal)](https://crates.io/crates/sd-journal) | [![docs.rs](https://docs.rs/sd-journal/badge.svg)](https://docs.rs/sd-journal)
 
 systemd.rs is an alternative to the [systemd-rust](https://github.com/jmesmon/rust-systemd) project.
 

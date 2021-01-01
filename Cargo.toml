@@ -9,7 +9,7 @@ repository = "https://gitlab.com/systemd.rs/sd-sys"
 license = "AGPL-3.0-or-later"
 keywords = ["systemd", "libsystemd"]
 links = "systemd"
-categories = ["os::linux-apis", "external-ffi-bindings"]
+categories = ["os::linux-apis", "external-ffi-bindings", "api-bindings"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
