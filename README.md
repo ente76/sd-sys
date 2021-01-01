@@ -2,12 +2,20 @@
 
 FFI bindings for systemd API as offered by libsystemd.
 
-sd-sys is an alternative to libsystemd-sys from the [systemd-rust](https://github.com/jmesmon/rust-systemd) project. The main differences of sd-sys to libsystemd-sys are:
+sd-sys is part of the [systemd.rs](https://gitlab.com/systemd.rs) project
 
-- sd-sys is published under the AGPL-3.0 license. Individual/commercial licenses are available upon request.
-- sd-sys covers only sd-journal and sd-id128 of libsystemd. There are currently no plans to extend this coverage. Whenever there is any doubt if that is enough, [systemd-rust](https://github.com/jmesmon/rust-systemd) may be a better choice.
+- [sd-id128](https://gitlab.com/systemd.rs/sd-id128) [![Crates.io](https://img.shields.io/crates/v/sd-id128)](https://crates.io/crates/sd-id128) [docs.rs](https://docs.rs/sd-id128/0.1.1/sd_id128/)
+- [sd-sys](https://gitlab.com/systemd.rs/sd-sys) [![Crates.io](https://img.shields.io/crates/v/sd-sys)](https://crates.io/crates/sd-sys) [docs.rs](https://docs.rs/sd-sys/0.1.0/sd_sys/)
+- [sd-journal](https://gitlab.com/systemd.rs/sd-journal)
 
-sd-sys serves [sd-id128](https://gitlab.com/systemd.rs/sd-id128) and [sd-journal](https://gitlab.com/systemd.rs/sd-journal) as the basic FFI binding.
+systemd.rs is an alternative to the [systemd-rust](https://github.com/jmesmon/rust-systemd) project.
+
+- systemd.rs is published under the AGPL-3.0 license. Individual/commercial licenses are available upon request.
+- focused coverage of sd-id128 & sd-journal only (currently there are no plans to extend this coverage)
+- good documentation with links to the libsystemd documentation
+- 100% coverage of libsystemd within the area of focus
+- good test coverage
+- focus on usability
 
 ## License
 
