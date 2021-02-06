@@ -20,7 +20,6 @@ systemd.rs is an alternative to the [systemd-rust](https://github.com/jmesmon/ru
 ## License
 
 sd-sys: FFI bindings to systemd for sd-id128 & sd-journal
-
 Copyright (C) 2020 Christian Klaue [mail@ck76.de]
 
 This program is free software: you can redistribute it and/or modify
