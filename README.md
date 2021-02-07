@@ -19,6 +19,9 @@ systemd.rs is an alternative to the [systemd-rust](https://github.com/jmesmon/ru
 
 ## License
 
+sd-sys is published under the AGPL-3.0, individual licenses may be granted upon request.
+
+```license
 sd-sys: FFI bindings to systemd for sd-id128 & sd-journal
 Copyright (C) 2020 Christian Klaue [mail@ck76.de]
 
@@ -34,5 +37,4 @@ GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-Individual licenses may be granted upon request.
+```
