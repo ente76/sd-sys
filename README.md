@@ -2,7 +2,6 @@
 
 [![buy me a coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-or%20I%20sing-53a0d0?style=flat&logo=Buy-Me-A-Coffee)](https://www.buymeacoffee.com/ente)  [![donate@paypal](https://img.shields.io/badge/paypal-donation-53a0d0?style=flat&logo=paypal)](https://www.paypal.com/donate?hosted_button_id=CRGNTJBS4AD4G)
 
-
 sd-sys defines the FFI bindings for sd-id128 & sd-journal in the systemd API of [libsystemd](https://www.freedesktop.org/software/systemd/man/sd-id128.html).  sd-sys is part of the [systemd.rs](https://github.com/ente76/systemd.rs) project:
 
 github.com | crates.io | docs.rs
