@@ -1,5 +1,7 @@
 language: rust
 dist: trusty
+before_install:
+  - sudo apt-get install libsystemd
 rust:
   - stable
   - beta
