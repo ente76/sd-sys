@@ -1,7 +1,7 @@
 language: rust
 dist: trusty
 before_install:
-  - sudo apt-get install libsystemd-id128-dev libsystemd-journal-dev
+  - sudo apt-get install libsystemd-dev
 rust:
   - stable
   - beta
