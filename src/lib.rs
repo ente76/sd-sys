@@ -1,5 +1,5 @@
 // sd-sys: FFI bindings to systemd for sd-id128 & sd-journal
-// Copyright (C) 2020 Christian Klaue mail@ck76.de
+// Copyright (C) 2020 Christian Klaue [mail@ck76.de]
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -13,10 +13,15 @@
 //
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 //! # sd-sys
 //!
-//! FFI bindings for systemd API as offered by libsystemd. These bindings are
-//! used in crates of the [sd-project](https://gitlab.com/systemd.rs).
+//! [![buy me a coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-or%20I%20sing-53a0d0?style=flat&logo=Buy-Me-A-Coffee)](https://www.buymeacoffee.com/ente)  [![donate@paypal](https://img.shields.io/badge/paypal-donation-53a0d0?style=flat&logo=paypal)](https://www.paypal.com/donate?hosted_button_id=CRGNTJBS4AD4G)
+//!
+//! [sd-sys](https://github.com/ente76/sd-sys) defines the FFI bindings for
+//! [sd-id128](https://github.com/ente76/sd-id128) &
+//! [sd-journal](https://github.com/ente76/sd-sys) in the systemd API of
+//! [libsystemd](https://www.freedesktop.org/software/systemd/man/sd-id128.html).
 
 /// FFI binding for sd-id128 as defined in libsystemd used in
 /// [sd-id128](https://gitlab.com/systemd.rs/sd-id128)

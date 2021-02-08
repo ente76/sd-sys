@@ -1,5 +1,5 @@
 // sd-sys: FFI bindings to systemd for sd-id128 & sd-journal
-// Copyright (C) 2020 Christian Klaue mail@ck76.de
+// Copyright (C) 2020 Christian Klaue [mail@ck76.de]
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -19,7 +19,7 @@ use libc::{c_char, c_int};
 /// This data type should rarely be used directly. Crate sd-id128 defines a
 /// wrapper `ID128`.
 ///
-/// While libsystemd defines the data type as a union of [u8;16] and [u64;2]
+/// While libsystemd defines the data type as a union of \[u8;16\] and \[u64;2\]
 /// currently sd-sys only supports the first.
 ///
 /// <https://www.freedesktop.org/software/systemd/man/sd-id128.html>
