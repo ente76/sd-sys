@@ -1,7 +1,6 @@
 language: rust
 dist: precise
 before_install:
-  - sudo apt-get update
   - sudo apt-get install libsystemd-dev pkg-config
 rust:
   - stable
