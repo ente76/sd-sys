@@ -1,7 +1,8 @@
 language: rust
 dist: trusty
 before_install:
-  - sudo apt-get install libsystemd-dev
+  - sudo apt-get update
+  - sudo apt-get install libsystemd-dev pkg-config
 rust:
   - stable
   - beta
