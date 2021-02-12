@@ -1,6 +1,6 @@
 [package]
 name = "sd-sys"
-version = "0.1.1"
+version = "1.0.0"
 authors = ["Christian Klaue <mail@ck76.de>"]
 edition = "2018"
 description = "FFI for libsystemd"

@@ -1,14 +1,12 @@
 # sd-sys
 
-[![buy me a coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-or%20I%20sing-53a0d0?style=flat&logo=Buy-Me-A-Coffee)](https://www.buymeacoffee.com/ente)  [![donate@paypal](https://img.shields.io/badge/paypal-donation-53a0d0?style=flat&logo=paypal)](https://www.paypal.com/donate?hosted_button_id=CRGNTJBS4AD4G)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ente76/sd-sys?label=github&logo=github)](https://github.com/ente76/sd-sys)  [![Crates.io](https://img.shields.io/crates/v/sd-sys)](https://crates.io/crates/sd-sys)  [![docs.rs](https://docs.rs/sd-sys/badge.svg)](https://docs.rs/sd-sys/)  ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ente76/sd-sys/test?label=test&logo=github) [![buy me a coffee](https://img.shields.io/badge/buy%20me%20a%20coffee-or%20I%20sing-53a0d0?style=flat&logo=Buy-Me-A-Coffee)](https://www.buymeacoffee.com/ente)  [![donate@paypal](https://img.shields.io/badge/paypal-donation-53a0d0?style=flat&logo=paypal)](https://www.paypal.com/donate?hosted_button_id=CRGNTJBS4AD4G)  
 
-sd-sys defines the FFI bindings for sd-id128 & sd-journal in the systemd API of [libsystemd](https://www.freedesktop.org/software/systemd/man/sd-id128.html).  sd-sys is part of the [systemd.rs](https://github.com/ente76/systemd.rs) project:
+[sd-sys](https://github.com/ente76/sd-sys) defines the FFI bindings for sd-id128 & sd-journal in the systemd API of [libsystemd](https://www.freedesktop.org/software/systemd/man/sd-id128.html).  sd-sys is part of the [systemd.rs](https://github.com/ente76/systemd.rs) project, providing the FFI bindings for [sd-id128](https://github.com/ente76/sd-id128) and [sd-journal](https://github.com/ente76/sd-journal).
 
-github.com | crates.io | docs.rs
------------|-----------|--------
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ente76/sd-sys)](https://github.com/ente76/sd-sys) | [![Crates.io](https://img.shields.io/crates/v/sd-sys)](https://crates.io/crates/sd-sys) | [![docs.rs](https://docs.rs/sd-sys/badge.svg)](https://docs.rs/sd-sys/)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ente76/sd-id128)](https://github.com/ente76/sd-id128) | [![Crates.io](https://img.shields.io/crates/v/sd-id128)](https://crates.io/crates/sd-id128) | [![docs.rs](https://docs.rs/sd-id128/badge.svg)](https://docs.rs/sd-id128/)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ente76/sd-journal)](https://github.com/ente76/sd-journal) | [![Crates.io](https://img.shields.io/crates/v/sd-journal)](https://crates.io/crates/sd-journal) | [![docs.rs](https://docs.rs/sd-journal/badge.svg)](https://docs.rs/sd-journal)
+## Compatibility
+
+This library is developed against the latest version of libsystemd. As such there may be FFI bindings included which are not available in previous versions. Issues may arise during linking, if an unavailable function is used. There is no version check included in this library. For an example of such version check, see the feature definition of [sd-id128](https://github.com/ente76/sd-id128).
 
 ## License
 
